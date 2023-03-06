@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="button">Нажми Alt+Shift+Click на мне!</button>
+
+<script>
+  button.onclick = function(event) {
+    if (event.altKey && event.shiftKey) {
+      alert('Ура!');
+    }
+  };
+</script>
+
+<input onmousemove="this.value=event.clientX+':'+event.clientY" value="Наведи на меня мышь">
+
+<span ondblclick="alert('dblclick')">Сделайте двойной клик на мне</span>
+
+До...
+<b ondblclick="alert('Клик!')" onmousedown="return false">
+  Сделайте двойной клик на мне
+</b>
+...После
+
+<div oncopy="alert('Копирование запрещено!');return false">
+  Уважаемый пользователь,
+  Копирование информации запрещено для вас.
+  Если вы знаете JS или HTML, вы можете найти всю нужную вам информацию в исходном коде страницы.
+</div>
+
+
+</body>

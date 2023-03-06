@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+<body>
+  <form id="mars-once" action="/apply/" method="POST" name="form" onsubmit='return validate()'>
+    <label>
+      Ваше имя:
+      <input type="text" name="name" id="name" placeholder="Илон Маск" required autofocus>
+    </label>
+  
+    <label>
+      Почта:
+      <input type="email" name="email" id="email" placeholder="elon@musk.com" required>
+    </label>
+  
+    <label>
+      Возраст:
+      <input type="number" name="age" required>
+    </label>
+  
+    <label>
+      Профессия:
+      <select name="specialization" required>
+        <option value="engineer" selected>Инженер</option>
+        <option value="scientist">Учёный</option>
+        <option value="psychologist">Психолог</option>
+        <option value="other">Другая</option>
+      </select>
+    </label>
+  
+    <label>
+      Я работал в NASA
+      <input type="checkbox" name="nasa-experience" value="1">
+    </label>
+  
+    <label>
+      Фото:
+      <input type="file" accept="image/jpeg" name="photo" required>
+    </label>
+  
+    <button type="submit">Отправить заявку</button>
+  </form>
+
+  <p>Enter your phone number (with area code) and then click "Check".
+  <br>The expected format is like ###-###-####.</p>
+  <form action="#">
+    <input id="phone"><button onclick="testInfo(document.getElementById('phone'));">Check</button>
+  </form>
+  <script src="1.js"></script>
+</body>
+
+
+</html>
