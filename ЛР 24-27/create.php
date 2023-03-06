@@ -1,16 +1,15 @@
 <?php
     $dbUser = 'root';
-    $dbName = 'torts';
+    $dbName = 'pie';
     $dbPass = '';
+    $id = $_POST['id'];
     $name = $_POST['name'];
-    $category = $_POST['category'];
-    $price = $_POST['price'];
-    $img = $_POST['img'];
-    $opis = $_POST['opis'];
+    $category = $_POST['age'];
+    $price = $_POST['salary'];
     $mysql = new mysqli('localhost', $dbUser, $dbPass, $dbName);
     $query = "set name utf8";
     $mysql->query($query);
-    $mysql->query("INSERT INTO `tort` (`idCategory`, `name`, `price`, `img`, `opis`) VALUES ('$category', '$name', '$price', '$img', '$opis')");
+    $mysql->query("INSERT INTO `workers` (`id`, `name`, `age`, `salary`) VALUES ('$id', '$name', '$category', '$price')");
     $mysql->close();
     header('Location: admin.php')
 ?>
